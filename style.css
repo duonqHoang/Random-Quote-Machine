@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Courier New", Courier, monospace;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  transition: background-color 1s ease;
+}
+
+.quote-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: auto;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  padding: 20px 40px;
+  transition: opacity 0.5s ease-out;
+}
+
+.text {
+  color: chocolate;
+}
+
+.quote {
+  font-size: 30px;
+}
+
+.author {
+  display: block;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: right;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+.new-quote {
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  background-color: chocolate;
+  color: #f2f2f2;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#tweet-quote {
+  background-color: chocolate;
+  height: 40px;
+  width: 40px;
+  color: #f2f2f2;
+  background-color: chocolate;
+  border-radius: 5px;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 900px) {
+  .quote {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .quote-box {
+    width: 80%;
+  }
+  .quote {
+    font-size: 20px;
+  }
+}
