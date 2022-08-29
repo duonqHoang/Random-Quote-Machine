@@ -21,9 +21,7 @@ function changeQuote() {
   author.textContent = "- " + newQuote.author;
   tweetButton.href =
     "https://twitter.com/intent/tweet?text=" +
-    newQuote.quote +
-    " - " +
-    newQuote.author;
+    encodeURIComponent('"' + newQuote.quote + '"' + " - " + newQuote.author);
 }
 
 function getRandomColor() {
