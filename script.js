@@ -5,6 +5,7 @@ const quoteBox = container.querySelector(".quote-box");
 const quote = quoteBox.querySelector(".quote");
 const author = quoteBox.querySelector(".author");
 const newQuoteButton = container.querySelector(".new-quote");
+const tweetButton = container.querySelector(".twitter-share-button");
 
 //get quotes from json file
 const quotes = data.default.quotes;
@@ -18,6 +19,11 @@ function changeQuote() {
   let newQuote = getRandomQuote();
   quote.textContent = newQuote.quote;
   author.textContent = "- " + newQuote.author;
+  tweetButton.href =
+    "https://twitter.com/intent/tweet?text=" +
+    newQuote.quote +
+    " - " +
+    newQuote.author;
 }
 
 function getRandomColor() {
